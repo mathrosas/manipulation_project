@@ -102,7 +102,7 @@ public:
     RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
     // setup_goal_pose_target(+0.343, +0.132, +0.264, -1.000, +0.000, +0.000,
     //                        +0.000);
-    setup_goal_pose_target(+0.346, +0.000, +0.220, -1.000, +0.000, +0.000,
+    setup_goal_pose_target(+0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
                            +0.000);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
@@ -129,7 +129,7 @@ public:
     RCLCPP_INFO(LOGGER, "Approaching...");
     // setup the cartesian target
     RCLCPP_INFO(LOGGER, "Preparing Cartesian Trajectory...");
-    setup_waypoints_target(+0.000, +0.000, -0.070);
+    setup_waypoints_target(+0.000, +0.000, -0.060);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Cartesian Trajectory...");
     plan_trajectory_cartesian();
@@ -142,7 +142,7 @@ public:
     RCLCPP_INFO(LOGGER, "Closing Gripper...");
     // setup the gripper joint value
     RCLCPP_INFO(LOGGER, "Preparing Gripper Value...");
-    setup_joint_value_gripper(+0.640);
+    setup_named_pose_gripper("close");
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Gripper Action...");
     plan_trajectory_gripper();
@@ -155,7 +155,7 @@ public:
     RCLCPP_INFO(LOGGER, "Retreating...");
     // setup the cartesian target
     RCLCPP_INFO(LOGGER, "Preparing Cartesian Trajectory...");
-    setup_waypoints_target(+0.000, +0.000, +0.070);
+    setup_waypoints_target(+0.000, +0.000, +0.060);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Cartesian Trajectory...");
     plan_trajectory_cartesian();
@@ -167,7 +167,7 @@ public:
     RCLCPP_INFO(LOGGER, "Going to Place Position...");
     // setup the goal pose target
     RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
-    setup_goal_pose_target(-0.345, +0.000, +0.220, -1.000, +0.000, +0.000,
+    setup_goal_pose_target(-0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
                            +0.000);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
