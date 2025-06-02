@@ -99,27 +99,15 @@ public:
 
     RCLCPP_INFO(LOGGER, "Going to Pregrasp Position...");
     // setup the goal pose target
-    // RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
+    RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
     // setup_goal_pose_target(+0.343, +0.132, +0.264, -1.000, +0.000, +0.000,
     //                        +0.000);
-
-    // setup_goal_pose_target(+0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
-    //                        +0.000);
-
-    // -2.807505, -1.695629, -1.787547, -1.229292, 1.570285, -1.236503
-
+    setup_goal_pose_target(+0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
+                           +0.000);
     // plan and execute the trajectory
-    // RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
-    // plan_trajectory_kinematics();
-    // RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
-    // execute_trajectory_kinematics();
-    RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
-    setup_joint_value_target(-2.807505, -1.695629, -1.787547, -1.229292,
-                             +1.570285, -1.236503);
-    // plan and execute the trajectory
-    RCLCPP_INFO(LOGGER, "Planning Joint Value Trajectory...");
+    RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
     plan_trajectory_kinematics();
-    RCLCPP_INFO(LOGGER, "Executing Joint Value Trajectory...");
+    RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
     execute_trajectory_kinematics();
     // wait for few seconds
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -181,22 +169,10 @@ public:
     RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
     setup_goal_pose_target(-0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
                            +0.000);
-
-    // -6.133185, -1.695629, -1.787547, -1.229292, 1.570285, -1.236503
-
-    // // plan and execute the trajectory
-    // RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
-    // plan_trajectory_kinematics();
-    // RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
-    // execute_trajectory_kinematics();
-    // setup the joint value target
-    RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
-    setup_joint_value_target(+0.000000, -1.695629, -1.787547, -1.229292,
-                             +1.570285, -1.236503);
     // plan and execute the trajectory
-    RCLCPP_INFO(LOGGER, "Planning Joint Value Trajectory...");
+    RCLCPP_INFO(LOGGER, "Planning Goal Pose Trajectory...");
     plan_trajectory_kinematics();
-    RCLCPP_INFO(LOGGER, "Executing Joint Value Trajectory...");
+    RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
     execute_trajectory_kinematics();
     // wait for few seconds
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
