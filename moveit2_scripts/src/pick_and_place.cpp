@@ -391,7 +391,7 @@ int main(int argc, char **argv) {
 
   // initialize base_node as shared pointer
   std::shared_ptr<rclcpp::Node> base_node =
-      std::make_shared<rclcpp::Node>("pick_and_place_trajectory");
+      std::make_shared<rclcpp::Node>("pick_and_place");
 
   // instantiate class
   PickAndPlaceTrajectory pick_and_place_trajectory_node(base_node);
