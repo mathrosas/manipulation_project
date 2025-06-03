@@ -114,9 +114,9 @@ public:
     // RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
     // execute_trajectory_kinematics();
     RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
-    setup_joint_value_target(-2.807505, -1.695629, -1.787547, -1.229292,
-                             +1.570285, -1.236503);
-    // plan and execute the trajectory
+    setup_joint_value_target(0.002634, -1.373942, 1.536554, -1.732970,
+                             -1.571293, -1.568870);
+    // // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Joint Value Trajectory...");
     plan_trajectory_kinematics();
     RCLCPP_INFO(LOGGER, "Executing Joint Value Trajectory...");
@@ -179,8 +179,8 @@ public:
     RCLCPP_INFO(LOGGER, "Going to Place Position...");
     // setup the goal pose target
     RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
-    setup_goal_pose_target(-0.342, -0.020, +0.230, -1.000, +0.000, +0.000,
-                           +0.000);
+    // setup_goal_pose_target(-0.343, +0.132, +0.264, -1.000, +0.000, +0.000,
+    //                        +0.000);
 
     // -6.133185, -1.695629, -1.787547, -1.229292, 1.570285, -1.236503
 
@@ -191,8 +191,8 @@ public:
     // execute_trajectory_kinematics();
     // setup the joint value target
     RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
-    setup_joint_value_target(+0.000000, -1.695629, -1.787547, -1.229292,
-                             +1.570285, -1.236503);
+    setup_joint_value_target(3.0000, -1.373942, 1.536554, -1.732970, -1.571293,
+                             -1.568870);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Joint Value Trajectory...");
     plan_trajectory_kinematics();
