@@ -18,6 +18,7 @@
   <depend>geometric_shapes</depend>
   <depend>control_msgs</depend>
   <depend>moveit_msgs</depend>
+  <depend>custom_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
