@@ -166,7 +166,7 @@ public:
 
     // 6) Retreat up 6 cm
     RCLCPP_INFO(LOGGER, "Retreating…");
-    setup_waypoints_target(0.000, 0.000, +0.160);
+    setup_waypoints_target(0.000, 0.000, +0.100);
     plan_trajectory_cartesian();
     execute_trajectory_cartesian();
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -174,8 +174,8 @@ public:
     // 7) Go to Place position (hard‐coded)
     RCLCPP_INFO(LOGGER, "Going to Place Position…");
     RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
-    setup_joint_value_target(+0.000000, -1.695629, -1.787547, -1.229292,
-                             +1.570285, -1.236503);
+    setup_joint_value_target(3.0000, -1.373942, 1.536554, -1.732970, -1.571293,
+                             -1.568870);
     // plan and execute the trajectory
     RCLCPP_INFO(LOGGER, "Planning Joint Value Trajectory...");
     plan_trajectory_kinematics();
