@@ -80,10 +80,28 @@ ament_target_dependencies(pick_and_place_perception
 	grasping_msgs
 	custom_msgs)
 
+add_executable(pick_and_place_perception_real
+    src/pick_and_place_perception_real.cpp)
+
+ament_target_dependencies(pick_and_place_perception_real
+    ament_cmake
+	rclcpp
+	rclcpp_action
+	moveit_core
+	moveit_ros_planning_interface
+	interactive_markers
+	moveit_ros_planning
+	control_msgs
+	geometric_shapes
+	moveit_msgs
+	grasping_msgs
+	custom_msgs)
+
 install(TARGETS 
 	pick_and_place
 	pick_and_place_real
 	pick_and_place_perception
+	pick_and_place_perception_real
     DESTINATION lib/${PROJECT_NAME}
 )
 
